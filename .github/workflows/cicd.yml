@@ -1,4 +1,4 @@
-name: Deploy MkDocs site to GitHub Pages
+name: mkdocs
 
 on:
   push:
@@ -26,13 +26,16 @@ jobs:
         run: |
           mkdocs build
 
+      - name: List output files
+        run: ls -l ./site
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: gihub-pages
+          name: mkdocs
           path: ./site
 
   deploy:
