@@ -1,0 +1,62 @@
+site_name: Seguridad de la Información
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tabs.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.sharing
+    - content.code.copy
+  palette:
+    # Palette toggle for light mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+#Navegación
+nav:
+  - Google WS: estandargw.md
+  - Index: index.md
+  - OWASP: owasp.md
+  - API:
+      - Intro: api/api1.md
+  - Tags: tags.md
+  - Blog:
+      - blog/index.md
+
+# Plugins
+plugins:
+  - search
+  - tags
+  - blog
+
+# Configuracion para code blocks
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
